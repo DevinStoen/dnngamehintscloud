@@ -73,9 +73,10 @@ def predict():
 
 
 if __name__ == "__main__":
-	port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0', port=port)
-	app.run(threaded=True)
+	#port = int(os.environ.get('PORT', 8000))
+	#app.run(host='0.0.0.0', port=port)
+	#app.run(threaded=True)
+	app.run()
 	print("running")
 	#decide what port to run the app in
 		#run the app locally on the givn port
