@@ -44,14 +44,14 @@ def predict():
 	#x = cv2.resize(x,(128,128))
 	#this 4d tensor is what we feed into the model
 	#x = x.reshape(1, 128, 128, 3)
-# 	x = cv2.imread('output.png')
-# 	x = np.invert(x)
-# #test_image=cv2.cvtColor(test_image, cv2.COLOR_BGR2GRAY)
-# 	x = cv2.resize(x,(200,200))
-# 	x = np.array(x)
-# 	x = x.astype('float32')
-# 	x /= 199
-# 	x= np.expand_dims(x, axis=0)
+	x = cv2.imread('output.png')
+	x = np.invert(x)
+#test_image=cv2.cvtColor(test_image, cv2.COLOR_BGR2GRAY)
+	x = cv2.resize(x,(200,200))
+	x = np.array(x)
+	x = x.astype('float32')
+	x /= 199
+	x= np.expand_dims(x, axis=0)
 	#x = np.array(x)
 	#x = x.astype('float32')
 	#x /= 255
@@ -61,23 +61,22 @@ def predict():
 	#x /= 255
 	#x= np.expand_dims(x, axis=0)
 	#x= np.expand_dims(x, axis=0)
-	# with graph.as_default():
-	# 	#perform the prediction
-	# 	out = model.predict(x)
-	# 	print(out)
-	# 	print(np.argmax(out,axis=1))
-	# 	#print "debug3"
-	# 	#convert the response to a string
-	# 	response = np.array_str(np.argmax(out,axis=1))
-	# 	return response	
-		return "working"
+	with graph.as_default():
+		#perform the prediction
+		out = model.predict(x)
+		print(out)
+		print(np.argmax(out,axis=1))
+		#print "debug3"
+		#convert the response to a string
+		response = np.array_str(np.argmax(out,axis=1))
+		return response	
 
 
 if __name__ == "__main__":
-	#port = int(os.environ.get('PORT', 8000))
-	#app.run(host='0.0.0.0', port=port)
-	#app.run(threaded=True)
-	app.run()
+	port = int(os.environ.get('PORT', 8000))
+	app.run(host='0.0.0.0', port=port)
+	app.run(threaded=True)
+	#app.run()
 	print("running")
 	#decide what port to run the app in
 		#run the app locally on the givn port
