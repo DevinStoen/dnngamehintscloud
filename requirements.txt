@@ -16,7 +16,7 @@ MarkupSafe==1.0
 matplotlib==2.0.0
 numpy==1.13.0
 olefile==0.44
-opencv-python==3.2.0.6
+opencv-python==3.4.7.28
 packaging==16.8
 Pillow==4.0.0
 protobuf==3.3.0
